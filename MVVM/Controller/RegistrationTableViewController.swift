@@ -9,5 +9,23 @@
 import UIKit
 
 class RegistrationTableViewController: UITableViewController {
+	
+	// MARK: ViewModel
+	
+	private var registrationViewModel: RegistrationViewModel!
 
+	// MARK: Storyboard
+	
+	@IBOutlet weak var firstNameTextField: UITextField!
+	@IBOutlet weak var lastNameTextField: UITextField!
+	@IBOutlet weak var emailTextField: UITextField!
+	@IBOutlet weak var passwordTextField: UITextField!
+	
+	@IBAction func save(_ sender: UIBarButtonItem) {
+		registrationViewModel = RegistrationViewModel(firstName: firstNameTextField.text,
+													  lastName: lastNameTextField.text,
+													  email: emailTextField.text,
+													  password: passwordTextField.text)
+		registrationViewModel.save()
+	}
 }

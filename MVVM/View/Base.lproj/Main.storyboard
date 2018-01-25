@@ -14,7 +14,7 @@
         <!--Registration-->
         <scene sceneID="uNY-Wo-UO8">
             <objects>
-                <tableViewController id="DuD-fa-4Ya" customClass="RegistrationTableViewController" customModule="MVVM" sceneMemberID="viewController">
+                <tableViewController id="DuD-fa-4Ya" customClass="RegistrationTableViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xX7-p5-KLQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,13 +44,13 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iqn-AD-VEx" customClass="BindingTextField" customModule="Basic" customModuleProvider="target">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iqn-AD-VEx">
                                                             <rect key="frame" x="0.0" y="93" width="343" height="38.666666666666657"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VYs-3x-zhu" customClass="BindingTextField" customModule="Basic" customModuleProvider="target">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VYs-3x-zhu">
                                                             <rect key="frame" x="0.0" y="139.66666666666666" width="343" height="38.333333333333343"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -78,15 +78,15 @@
                     <navigationItem key="navigationItem" title="Registration" id="2yl-SW-0yj">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="7wp-CE-eeD">
                             <connections>
-                                <action selector="save:" destination="DuD-fa-4Ya" id="ALH-NM-k5c"/>
+                                <action selector="save:" destination="DuD-fa-4Ya" id="BPu-7u-3cv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailTextField" destination="Iqn-AD-VEx" id="NAk-Ro-ULb"/>
-                        <outlet property="firstNameTextField" destination="RbS-uP-xVt" id="C5B-Pw-6zH"/>
-                        <outlet property="lastNameTextField" destination="kDk-89-ils" id="eK3-vS-Qct"/>
-                        <outlet property="passwordTextField" destination="VYs-3x-zhu" id="wQx-Y7-OeD"/>
+                        <outlet property="emailTextField" destination="Iqn-AD-VEx" id="Fb5-Jg-jGB"/>
+                        <outlet property="firstNameTextField" destination="RbS-uP-xVt" id="CFh-7e-rrl"/>
+                        <outlet property="lastNameTextField" destination="kDk-89-ils" id="4Y9-ZZ-EYQ"/>
+                        <outlet property="passwordTextField" destination="VYs-3x-zhu" id="BMo-Qd-QcQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vm2-hV-PFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
