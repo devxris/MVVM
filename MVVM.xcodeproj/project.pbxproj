@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		451EEE572019C03600F6ED89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE562019C03600F6ED89 /* AppDelegate.swift */; };
-		451EEE592019C03600F6ED89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE582019C03600F6ED89 /* ViewController.swift */; };
 		451EEE5C2019C03600F6ED89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451EEE5A2019C03600F6ED89 /* Main.storyboard */; };
 		451EEE5E2019C03600F6ED89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451EEE5D2019C03600F6ED89 /* Assets.xcassets */; };
 		451EEE612019C03600F6ED89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451EEE5F2019C03600F6ED89 /* LaunchScreen.storyboard */; };
+		451EEE6E2019C0B900F6ED89 /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE6D2019C0B900F6ED89 /* RegistrationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		451EEE532019C03500F6ED89 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		451EEE562019C03600F6ED89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		451EEE582019C03600F6ED89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		451EEE5B2019C03600F6ED89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		451EEE5D2019C03600F6ED89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		451EEE602019C03600F6ED89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		451EEE622019C03600F6ED89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		451EEE6D2019C0B900F6ED89 /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,62 @@
 		451EEE552019C03500F6ED89 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				451EEE562019C03600F6ED89 /* AppDelegate.swift */,
-				451EEE582019C03600F6ED89 /* ViewController.swift */,
-				451EEE5A2019C03600F6ED89 /* Main.storyboard */,
-				451EEE5D2019C03600F6ED89 /* Assets.xcassets */,
-				451EEE5F2019C03600F6ED89 /* LaunchScreen.storyboard */,
-				451EEE622019C03600F6ED89 /* Info.plist */,
+				451EEE6F2019C13300F6ED89 /* DataAccess */,
+				451EEE682019C04700F6ED89 /* Resources */,
+				451EEE6B2019C07A00F6ED89 /* Model */,
+				451EEE6C2019C07F00F6ED89 /* ViewModel */,
+				451EEE692019C05100F6ED89 /* View */,
+				451EEE6A2019C05C00F6ED89 /* Controller */,
 			);
 			path = MVVM;
+			sourceTree = "<group>";
+		};
+		451EEE682019C04700F6ED89 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				451EEE5D2019C03600F6ED89 /* Assets.xcassets */,
+				451EEE622019C03600F6ED89 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		451EEE692019C05100F6ED89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				451EEE5F2019C03600F6ED89 /* LaunchScreen.storyboard */,
+				451EEE5A2019C03600F6ED89 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		451EEE6A2019C05C00F6ED89 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				451EEE562019C03600F6ED89 /* AppDelegate.swift */,
+				451EEE6D2019C0B900F6ED89 /* RegistrationTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		451EEE6B2019C07A00F6ED89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		451EEE6C2019C07F00F6ED89 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		451EEE6F2019C13300F6ED89 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataAccess;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				451EEE592019C03600F6ED89 /* ViewController.swift in Sources */,
+				451EEE6E2019C0B900F6ED89 /* RegistrationTableViewController.swift in Sources */,
 				451EEE572019C03600F6ED89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H46LQG73T;
-				INFOPLIST_FILE = MVVM/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVVM/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devxris.MVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,7 +339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H46LQG73T;
-				INFOPLIST_FILE = MVVM/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVVM/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devxris.MVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";

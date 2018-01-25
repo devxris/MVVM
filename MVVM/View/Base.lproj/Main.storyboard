@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iQT-1w-N1m">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Registration-->
+        <scene sceneID="uNY-Wo-UO8">
+            <objects>
+                <tableViewController id="DuD-fa-4Ya" customClass="RegistrationTableViewController" customModule="MVVM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xX7-p5-KLQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="wuU-rx-t4O">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="200" id="QEf-fm-08s">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QEf-fm-08s" id="rW0-rJ-cT3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qlr-Nc-WkI">
+                                                    <rect key="frame" x="16" y="11" width="343" height="178"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbS-uP-xVt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="38.666666666666664"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDk-89-ils">
+                                                            <rect key="frame" x="0.0" y="46.666666666666657" width="343" height="38.333333333333343"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iqn-AD-VEx" customClass="BindingTextField" customModule="Basic" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="93" width="343" height="38.666666666666657"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VYs-3x-zhu" customClass="BindingTextField" customModule="Basic" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="139.66666666666666" width="343" height="38.333333333333343"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qlr-Nc-WkI" firstAttribute="leading" secondItem="rW0-rJ-cT3" secondAttribute="leadingMargin" id="8f5-AL-UmD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Qlr-Nc-WkI" secondAttribute="trailing" id="pqN-0D-TxH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Qlr-Nc-WkI" secondAttribute="bottom" id="rrd-Rn-ciV"/>
+                                                <constraint firstItem="Qlr-Nc-WkI" firstAttribute="top" secondItem="rW0-rJ-cT3" secondAttribute="topMargin" id="v7K-sL-tqS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="DuD-fa-4Ya" id="Dl3-qK-ulW"/>
+                            <outlet property="delegate" destination="DuD-fa-4Ya" id="D8U-mD-eHj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Registration" id="2yl-SW-0yj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7wp-CE-eeD">
+                            <connections>
+                                <action selector="save:" destination="DuD-fa-4Ya" id="ALH-NM-k5c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="Iqn-AD-VEx" id="NAk-Ro-ULb"/>
+                        <outlet property="firstNameTextField" destination="RbS-uP-xVt" id="C5B-Pw-6zH"/>
+                        <outlet property="lastNameTextField" destination="kDk-89-ils" id="eK3-vS-Qct"/>
+                        <outlet property="passwordTextField" destination="VYs-3x-zhu" id="wQx-Y7-OeD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vm2-hV-PFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313" y="21"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mom-N8-hH7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iQT-1w-N1m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iDV-6r-B8S">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DuD-fa-4Ya" kind="relationship" relationship="rootViewController" id="YVV-gt-y4Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sre-xB-trx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1004" y="21"/>
+        </scene>
+    </scenes>
+</document>
