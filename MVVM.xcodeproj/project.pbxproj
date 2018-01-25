@@ -14,6 +14,10 @@
 		451EEE6E2019C0B900F6ED89 /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE6D2019C0B900F6ED89 /* RegistrationTableViewController.swift */; };
 		451EEE712019C1C300F6ED89 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE702019C1C300F6ED89 /* User.swift */; };
 		451EEE732019C32D00F6ED89 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE722019C32D00F6ED89 /* RegistrationViewModel.swift */; };
+		451EEE752019C6BB00F6ED89 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE742019C6BB00F6ED89 /* UsersTableViewController.swift */; };
+		451EEE772019C71F00F6ED89 /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE762019C71F00F6ED89 /* DataAccess.swift */; };
+		451EEE792019C84D00F6ED89 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE782019C84D00F6ED89 /* UsersListViewModel.swift */; };
+		451EEE7B2019C87400F6ED89 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE7A2019C87400F6ED89 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		451EEE6D2019C0B900F6ED89 /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
 		451EEE702019C1C300F6ED89 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		451EEE722019C32D00F6ED89 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		451EEE742019C6BB00F6ED89 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		451EEE762019C71F00F6ED89 /* DataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
+		451EEE782019C84D00F6ED89 /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
+		451EEE7A2019C87400F6ED89 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +66,8 @@
 		451EEE552019C03500F6ED89 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				451EEE6F2019C13300F6ED89 /* DataAccess */,
 				451EEE682019C04700F6ED89 /* Resources */,
+				451EEE6F2019C13300F6ED89 /* DataAccess */,
 				451EEE6B2019C07A00F6ED89 /* Model */,
 				451EEE6C2019C07F00F6ED89 /* ViewModel */,
 				451EEE692019C05100F6ED89 /* View */,
@@ -91,6 +99,7 @@
 			children = (
 				451EEE562019C03600F6ED89 /* AppDelegate.swift */,
 				451EEE6D2019C0B900F6ED89 /* RegistrationTableViewController.swift */,
+				451EEE742019C6BB00F6ED89 /* UsersTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				451EEE722019C32D00F6ED89 /* RegistrationViewModel.swift */,
+				451EEE782019C84D00F6ED89 /* UsersListViewModel.swift */,
+				451EEE7A2019C87400F6ED89 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -114,6 +125,7 @@
 		451EEE6F2019C13300F6ED89 /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
+				451EEE762019C71F00F6ED89 /* DataAccess.swift */,
 			);
 			path = DataAccess;
 			sourceTree = "<group>";
@@ -191,8 +203,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				451EEE6E2019C0B900F6ED89 /* RegistrationTableViewController.swift in Sources */,
+				451EEE7B2019C87400F6ED89 /* UserViewModel.swift in Sources */,
+				451EEE772019C71F00F6ED89 /* DataAccess.swift in Sources */,
 				451EEE732019C32D00F6ED89 /* RegistrationViewModel.swift in Sources */,
 				451EEE572019C03600F6ED89 /* AppDelegate.swift in Sources */,
+				451EEE792019C84D00F6ED89 /* UsersListViewModel.swift in Sources */,
+				451EEE752019C6BB00F6ED89 /* UsersTableViewController.swift in Sources */,
 				451EEE712019C1C300F6ED89 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
