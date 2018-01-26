@@ -12,16 +12,37 @@ class RegistrationTableViewController: UITableViewController {
 	
 	// MARK: ViewModel
 	
+	var selectedUserViewModel: UserViewModel? {
+		didSet { updateUI() }
+	}
+	
 	private var registrationViewModel: RegistrationViewModel!
+	
+	// MARK: Private funcs
+	
+	private func updateUI() { // populate View from ViewModel
+		firstNameTextField?.text = selectedUserViewModel?.firstName
+		lastNameTextField?.text = selectedUserViewModel?.lastName
+		emailTextField?.text = selectedUserViewModel?.email
+		passwordTextField?.text = selectedUserViewModel?.password
+	}
+	
+	// MARK: ViewController Life Cycles
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		updateUI()
+	}
 
 	// MARK: Storyboard
 	
-	@IBOutlet weak var firstNameTextField: UITextField!
-	@IBOutlet weak var lastNameTextField: UITextField!
-	@IBOutlet weak var emailTextField: UITextField!
-	@IBOutlet weak var passwordTextField: UITextField!
+	@IBOutlet private weak var firstNameTextField: UITextField!
+	@IBOutlet private weak var lastNameTextField: UITextField!
+	@IBOutlet private weak var emailTextField: UITextField!
+	@IBOutlet private weak var passwordTextField: UITextField!
 	
-	@IBAction func save(_ sender: UIBarButtonItem) {
+	@IBAction private func save(_ sender: UIBarButtonItem) {
+		// populate ViewModel from View
 		registrationViewModel = RegistrationViewModel(firstName: firstNameTextField.text,
 													  lastName: lastNameTextField.text,
 													  email: emailTextField.text,

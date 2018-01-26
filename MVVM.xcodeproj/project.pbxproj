@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				451EEE562019C03600F6ED89 /* AppDelegate.swift */,
-				451EEE6D2019C0B900F6ED89 /* RegistrationTableViewController.swift */,
 				451EEE742019C6BB00F6ED89 /* UsersTableViewController.swift */,
+				451EEE6D2019C0B900F6ED89 /* RegistrationTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

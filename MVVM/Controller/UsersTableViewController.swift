@@ -33,4 +33,15 @@ class UsersTableViewController: UITableViewController {
 		cell.detailTextLabel?.text = usersListViewModel?.userViewModels[indexPath.row].email
 		return cell
 	}
+	
+	// MARK: Navigations
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "ShowRegistration" {
+			guard let registrationTBC = segue.destination as? RegistrationTableViewController else { return }
+			guard let chosenIndexPath = tableView.indexPathForSelectedRow else { return }
+			guard let selectedUserViewModel = usersListViewModel?.userViewModels[chosenIndexPath.row] else { return}
+			registrationTBC.selectedUserViewModel = selectedUserViewModel
+		}
+	}
 }
