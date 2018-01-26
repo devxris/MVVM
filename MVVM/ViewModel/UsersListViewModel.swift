@@ -12,8 +12,9 @@ struct UsersListViewModel { // represent the whole UITableView
 	
 	var userViewModels = [UserViewModel]()
 	
-	init() {
-		// get all Users from DataAccess and convert to UserViewModel
+	private var userViewModelsChanged: ((String) -> ())?
+	
+	init() { // get all Users from DataAccess and convert to UserViewModel
 		userViewModels = DataAccess.shared.allUsers.flatMap { UserViewModel(user: $0) }
 	}
 }

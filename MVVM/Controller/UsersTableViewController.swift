@@ -12,7 +12,11 @@ class UsersTableViewController: UITableViewController {
 
 	// MARK: ViewModel
 	
-	private var usersListViewModel: UsersListViewModel!
+	private var usersListViewModel: UsersListViewModel! {
+		didSet {
+			tableView.reloadData()
+		}
+	}
 	
 	// MARK: ViewController Life Cycle
 	
@@ -21,6 +25,11 @@ class UsersTableViewController: UITableViewController {
 		usersListViewModel = UsersListViewModel() // better to have a callback to represent the ViewModel is initialized
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		usersListViewModel = UsersListViewModel()
+	}
+		
 	// MARK: UITableViewDataSource
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,6 +51,7 @@ class UsersTableViewController: UITableViewController {
 			guard let chosenIndexPath = tableView.indexPathForSelectedRow else { return }
 			guard let selectedUserViewModel = usersListViewModel?.userViewModels[chosenIndexPath.row] else { return}
 			registrationTBC.selectedUserViewModel = selectedUserViewModel
+			registrationTBC.selectedIndex = chosenIndexPath.row
 		}
 	}
 }

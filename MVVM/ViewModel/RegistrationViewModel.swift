@@ -14,12 +14,14 @@ struct RegistrationViewModel { // represent the whole UITableView
 	var lastName: String?
 	var email: String?
 	var password: String?
+	var index: Int?
 	
-	init(firstName: String? = nil, lastName: String? = nil, email: String? = nil, password: String? = nil) {
+	init(firstName: String? = nil, lastName: String? = nil, email: String? = nil, password: String? = nil, index: Int? = nil) {
 		self.firstName = firstName
 		self.lastName = lastName
 		self.email = email
 		self.password = password
+		self.index = index
 	}
 	
 	init(userViewModel: UserViewModel?) {
@@ -30,7 +32,11 @@ struct RegistrationViewModel { // represent the whole UITableView
 	}
 	
 	func save() {
-		let _ = User(viewModel: self)
+		let savedUser = User(viewModel: self)
+		print(savedUser.firstName)
 		// save the user to DataAccess, e.g. DataAccess.save()
+		if let index = index {
+			DataAccess.shared.save(savedUser, at: index)
+		}
 	}
 }

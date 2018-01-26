@@ -13,8 +13,13 @@ class RegistrationTableViewController: UITableViewController {
 	// MARK: ViewModel
 	
 	var selectedUserViewModel: UserViewModel? {
-		didSet { registrationViewModel = RegistrationViewModel(userViewModel: selectedUserViewModel) }
+		didSet {
+			registrationViewModel = RegistrationViewModel(userViewModel: selectedUserViewModel)
+			registrationViewModel.index = selectedIndex
+		}
 	}
+	
+	var selectedIndex: Int?
 	
 	private var registrationViewModel: RegistrationViewModel!
 	
@@ -47,8 +52,8 @@ class RegistrationTableViewController: UITableViewController {
 	}
 	
 	@IBAction private func save(_ sender: UIBarButtonItem) {
-		print(registrationViewModel)
-		selectedUserViewModel?.email?.value = "binding@viewModel.toView"
-		selectedUserViewModel?.password?.value = "success"
+//		selectedUserViewModel?.email?.value = "binding@viewModel.toView"
+//		selectedUserViewModel?.password?.value = "success"
+		registrationViewModel.save()
 	}
 }
