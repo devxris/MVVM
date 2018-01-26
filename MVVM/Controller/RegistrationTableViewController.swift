@@ -13,30 +13,21 @@ class RegistrationTableViewController: UITableViewController {
 	// MARK: ViewModel
 	
 	var selectedUserViewModel: UserViewModel? {
-		didSet { updateUI() }
+		didSet { registrationViewModel = RegistrationViewModel(userViewModel: selectedUserViewModel) }
 	}
 	
 	private var registrationViewModel: RegistrationViewModel!
-	
-	// MARK: Private funcs
-	
-	private func updateUI() { // populate View from ViewModel
-		firstNameTextField?.text = selectedUserViewModel?.firstName
-		lastNameTextField?.text = selectedUserViewModel?.lastName
-		emailTextField?.text = selectedUserViewModel?.email
-		passwordTextField?.text = selectedUserViewModel?.password
-		
-		registrationViewModel = RegistrationViewModel(firstName: selectedUserViewModel?.firstName,
-													  lastName: selectedUserViewModel?.lastName,
-													  email: selectedUserViewModel?.email,
-													  password: selectedUserViewModel?.password)
-	}
 	
 	// MARK: ViewController Life Cycles
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		updateUI()
+
+		/* Binding ViewModel to View */
+		selectedUserViewModel?.firstName?.bind { [weak self] in self?.firstNameTextField?.text = $0 }
+		selectedUserViewModel?.lastName?.bind { [weak self] in self?.lastNameTextField?.text = $0 }
+		selectedUserViewModel?.email?.bind { [weak self] in self?.emailTextField?.text = $0 }
+		selectedUserViewModel?.password?.bind { [weak self] in self?.passwordTextField?.text = $0 }
 	}
 
 	// MARK: Storyboard
@@ -57,5 +48,7 @@ class RegistrationTableViewController: UITableViewController {
 	
 	@IBAction private func save(_ sender: UIBarButtonItem) {
 		print(registrationViewModel)
+		selectedUserViewModel?.email?.value = "binding@viewModel.toView"
+		selectedUserViewModel?.password?.value = "success"
 	}
 }

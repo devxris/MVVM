@@ -22,6 +22,13 @@ struct RegistrationViewModel { // represent the whole UITableView
 		self.password = password
 	}
 	
+	init(userViewModel: UserViewModel?) {
+		firstName = userViewModel?.firstName?.value
+		lastName = userViewModel?.lastName?.value
+		email = userViewModel?.email?.value
+		password = userViewModel?.password?.value
+	}
+	
 	func save() {
 		let _ = User(viewModel: self)
 		// save the user to DataAccess, e.g. DataAccess.save()

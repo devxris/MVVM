@@ -30,7 +30,7 @@ class UsersTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 		cell.textLabel?.text = usersListViewModel?.userViewModels[indexPath.row].fullName
-		cell.detailTextLabel?.text = usersListViewModel?.userViewModels[indexPath.row].email
+		cell.detailTextLabel?.text = usersListViewModel?.userViewModels[indexPath.row].email?.value
 		return cell
 	}
 	
