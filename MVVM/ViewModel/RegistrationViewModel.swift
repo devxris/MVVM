@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RegistrationViewModel { // represent the whole UITableView
+struct RegistrationViewModel: ValidatableViewModel { // represent the whole UITableView
 	
 	var firstName: String?
 	var lastName: String?
@@ -36,6 +36,30 @@ struct RegistrationViewModel { // represent the whole UITableView
 		// save the user to DataAccess, e.g. DataAccess.save()
 		if let index = index {
 			DataAccess.shared.save(savedUser, at: index)
+		}
+	}
+	
+	// MARK: ValidatableViewModel protocol
+	
+	var brokenRule: [BrokenRule] = []
+	
+	var isValid: Bool {
+		mutating get {
+			brokenRule = [BrokenRule]()
+			self.validate()
+			return brokenRule.count == 0 ? true : false
+		}
+	}
+}
+
+extension RegistrationViewModel {
+	
+	private mutating func validate() {
+		if let email = email, email.isEmpty {
+			brokenRule.append(BrokenRule(propertyName: "email", message: "Email is required!"))
+		}
+		if let password = password, password.isEmpty {
+			brokenRule.append(BrokenRule(propertyName: "password", message: "Password is required!"))
 		}
 	}
 }

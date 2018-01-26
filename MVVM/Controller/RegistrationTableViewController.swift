@@ -54,18 +54,12 @@ class RegistrationTableViewController: UITableViewController {
 	}
 	
 	@IBAction private func save(_ sender: UIBarButtonItem) {
-		var message = ""
-		if let email = registrationViewModel.email, email.isEmpty {
-			message = "Email is empty!"
-		}
-		if let password = registrationViewModel.password, password.isEmpty {
-			message += " Password is empty!"
-		}
-		if message.isEmpty {
+		if registrationViewModel.isValid {
 			registrationViewModel.save()
 			userInfoChanged?("user changed")
 			navigationController?.popViewController(animated: true)
 		} else {
+			let message = registrationViewModel.brokenRule.reduce("") { $0 + "\n" + $1.message }
 			let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
 			alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 			present(alert, animated: true, completion: nil)

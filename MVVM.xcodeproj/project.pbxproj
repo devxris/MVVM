@@ -19,6 +19,7 @@
 		451EEE792019C84D00F6ED89 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE782019C84D00F6ED89 /* UsersListViewModel.swift */; };
 		451EEE7B2019C87400F6ED89 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE7A2019C87400F6ED89 /* UserViewModel.swift */; };
 		451EEE7D201AC8A000F6ED89 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE7C201AC8A000F6ED89 /* BindingTextField.swift */; };
+		451EEE80201B2CBC00F6ED89 /* ValidatableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE7F201B2CBC00F6ED89 /* ValidatableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		451EEE782019C84D00F6ED89 /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
 		451EEE7A2019C87400F6ED89 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		451EEE7C201AC8A000F6ED89 /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
+		451EEE7F201B2CBC00F6ED89 /* ValidatableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		451EEE552019C03500F6ED89 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				451EEE7E201B2C8400F6ED89 /* Protocol */,
 				451EEE682019C04700F6ED89 /* Resources */,
 				451EEE6F2019C13300F6ED89 /* DataAccess */,
 				451EEE6B2019C07A00F6ED89 /* Model */,
@@ -131,6 +134,14 @@
 				451EEE762019C71F00F6ED89 /* DataAccess.swift */,
 			);
 			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		451EEE7E201B2C8400F6ED89 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				451EEE7F201B2CBC00F6ED89 /* ValidatableViewModel.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 				451EEE6E2019C0B900F6ED89 /* RegistrationTableViewController.swift in Sources */,
 				451EEE7D201AC8A000F6ED89 /* BindingTextField.swift in Sources */,
 				451EEE7B2019C87400F6ED89 /* UserViewModel.swift in Sources */,
+				451EEE80201B2CBC00F6ED89 /* ValidatableViewModel.swift in Sources */,
 				451EEE772019C71F00F6ED89 /* DataAccess.swift in Sources */,
 				451EEE732019C32D00F6ED89 /* RegistrationViewModel.swift in Sources */,
 				451EEE572019C03600F6ED89 /* AppDelegate.swift in Sources */,
