@@ -25,6 +25,11 @@ class RegistrationTableViewController: UITableViewController {
 		lastNameTextField?.text = selectedUserViewModel?.lastName
 		emailTextField?.text = selectedUserViewModel?.email
 		passwordTextField?.text = selectedUserViewModel?.password
+		
+		registrationViewModel = RegistrationViewModel(firstName: selectedUserViewModel?.firstName,
+													  lastName: selectedUserViewModel?.lastName,
+													  email: selectedUserViewModel?.email,
+													  password: selectedUserViewModel?.password)
 	}
 	
 	// MARK: ViewController Life Cycles
@@ -36,17 +41,21 @@ class RegistrationTableViewController: UITableViewController {
 
 	// MARK: Storyboard
 	
-	@IBOutlet private weak var firstNameTextField: UITextField!
-	@IBOutlet private weak var lastNameTextField: UITextField!
-	@IBOutlet private weak var emailTextField: UITextField!
-	@IBOutlet private weak var passwordTextField: UITextField!
+	/* Binding View to ViewModel */
+	@IBOutlet private weak var firstNameTextField: BindingTextField! {
+		didSet { firstNameTextField?.bind { [weak self] in self?.registrationViewModel.firstName = $0 } }
+	}
+	@IBOutlet private weak var lastNameTextField: BindingTextField! {
+		didSet { lastNameTextField?.bind { [weak self] in self?.registrationViewModel.lastName = $0 } }
+	}
+	@IBOutlet private weak var emailTextField: BindingTextField! {
+		didSet { emailTextField?.bind { [weak self] in self?.registrationViewModel.email = $0 } }
+	}
+	@IBOutlet private weak var passwordTextField: BindingTextField! {
+		didSet { passwordTextField?.bind { [weak self] in self?.registrationViewModel.password = $0 } }
+	}
 	
 	@IBAction private func save(_ sender: UIBarButtonItem) {
-		// populate ViewModel from View
-		registrationViewModel = RegistrationViewModel(firstName: firstNameTextField.text,
-													  lastName: lastNameTextField.text,
-													  email: emailTextField.text,
-													  password: passwordTextField.text)
-		registrationViewModel.save()
+		print(registrationViewModel)
 	}
 }

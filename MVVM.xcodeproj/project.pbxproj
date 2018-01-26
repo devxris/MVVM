@@ -18,6 +18,7 @@
 		451EEE772019C71F00F6ED89 /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE762019C71F00F6ED89 /* DataAccess.swift */; };
 		451EEE792019C84D00F6ED89 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE782019C84D00F6ED89 /* UsersListViewModel.swift */; };
 		451EEE7B2019C87400F6ED89 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE7A2019C87400F6ED89 /* UserViewModel.swift */; };
+		451EEE7D201AC8A000F6ED89 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451EEE7C201AC8A000F6ED89 /* BindingTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		451EEE762019C71F00F6ED89 /* DataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
 		451EEE782019C84D00F6ED89 /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
 		451EEE7A2019C87400F6ED89 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		451EEE7C201AC8A000F6ED89 /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				451EEE5F2019C03600F6ED89 /* LaunchScreen.storyboard */,
 				451EEE5A2019C03600F6ED89 /* Main.storyboard */,
+				451EEE7C201AC8A000F6ED89 /* BindingTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451EEE6E2019C0B900F6ED89 /* RegistrationTableViewController.swift in Sources */,
+				451EEE7D201AC8A000F6ED89 /* BindingTextField.swift in Sources */,
 				451EEE7B2019C87400F6ED89 /* UserViewModel.swift in Sources */,
 				451EEE772019C71F00F6ED89 /* DataAccess.swift in Sources */,
 				451EEE732019C32D00F6ED89 /* RegistrationViewModel.swift in Sources */,
