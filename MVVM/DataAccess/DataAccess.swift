@@ -25,5 +25,4 @@ class DataAccess { // a singleton
 		allUsers.remove(at: index)
 		allUsers.insert(user, at: index)
 	}
-	
 }

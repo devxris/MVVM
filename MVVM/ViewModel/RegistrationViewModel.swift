@@ -33,7 +33,6 @@ struct RegistrationViewModel { // represent the whole UITableView
 	
 	func save() {
 		let savedUser = User(viewModel: self)
-		print(savedUser.firstName)
 		// save the user to DataAccess, e.g. DataAccess.save()
 		if let index = index {
 			DataAccess.shared.save(savedUser, at: index)

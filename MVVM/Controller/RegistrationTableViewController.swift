@@ -21,6 +21,8 @@ class RegistrationTableViewController: UITableViewController {
 	
 	var selectedIndex: Int?
 	
+	var userInfoChanged: ((String) -> ())?
+	
 	private var registrationViewModel: RegistrationViewModel!
 	
 	// MARK: ViewController Life Cycles
@@ -55,5 +57,7 @@ class RegistrationTableViewController: UITableViewController {
 //		selectedUserViewModel?.email?.value = "binding@viewModel.toView"
 //		selectedUserViewModel?.password?.value = "success"
 		registrationViewModel.save()
+		userInfoChanged?("user changed")
+		navigationController?.popViewController(animated: true)
 	}
 }

@@ -24,11 +24,6 @@ class UsersTableViewController: UITableViewController {
 		super.viewDidLoad()
 		usersListViewModel = UsersListViewModel() // better to have a callback to represent the ViewModel is initialized
 	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		usersListViewModel = UsersListViewModel()
-	}
 		
 	// MARK: UITableViewDataSource
 	
@@ -52,6 +47,10 @@ class UsersTableViewController: UITableViewController {
 			guard let selectedUserViewModel = usersListViewModel?.userViewModels[chosenIndexPath.row] else { return}
 			registrationTBC.selectedUserViewModel = selectedUserViewModel
 			registrationTBC.selectedIndex = chosenIndexPath.row
+			registrationTBC.userInfoChanged = { [weak self] info in
+				print(info)
+				self?.usersListViewModel = UsersListViewModel()
+			}
 		}
 	}
 }
