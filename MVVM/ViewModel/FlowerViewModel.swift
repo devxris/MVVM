@@ -9,6 +9,7 @@
 import Foundation
 
 struct FlowerViewModel {
+	
 	var name: String
 	var description: String
 	

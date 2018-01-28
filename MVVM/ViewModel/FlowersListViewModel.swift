@@ -8,16 +8,22 @@
 
 import Foundation
 
-struct FlowersListViewModel {
+class FlowersListViewModel {
 	
 	var flowerViewModels = [FlowerViewModel]()
 	
-	/*
-	init(flowers: [Flower]) {
+	func populate(_ flowers: [Flower]) {
 		flowerViewModels = flowers.map { FlowerViewModel(flower: $0) }
-	}*/
+	}
 	
-	mutating func populate(_ flowers: [Flower]) {
-		flowerViewModels = flowers.map { FlowerViewModel(flower: $0) }
+	/* Calling WebService in ViewModel */
+	init(webService: WebService, completion: @escaping () -> ()) {
+		webService.load { flowers in
+			if let flowers = flowers {
+				let newFlowerModels = flowers.map { FlowerViewModel(flower: $0) }
+				self.flowerViewModels = newFlowerModels
+				DispatchQueue.main.async { completion() }
+			}
+		}
 	}
 }

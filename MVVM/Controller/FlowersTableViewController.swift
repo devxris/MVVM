@@ -19,14 +19,8 @@ class FlowersTableViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		flowersListViewModel = FlowersListViewModel()
-		
-		/* Calling WebService in ViewController */
-		WebService.shared.load { (flowers) in
-			if let flowers = flowers {
-				self.flowersListViewModel.populate(flowers)
-				self.tableView.reloadData()
-			}
+		flowersListViewModel = FlowersListViewModel(webService: WebService.shared) {
+			self.tableView.reloadData()
 		}
 	}
 	
