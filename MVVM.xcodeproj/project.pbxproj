@@ -23,6 +23,8 @@
 		4540CDB5201D8EB80095D10B /* FlowersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540CDB4201D8EB80095D10B /* FlowersTableViewController.swift */; };
 		4540CDB8201D8F080095D10B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540CDB7201D8F080095D10B /* WebService.swift */; };
 		4540CDBA201D8FEE0095D10B /* Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540CDB9201D8FEE0095D10B /* Flower.swift */; };
+		4540CDBC201D92DC0095D10B /* FlowersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540CDBB201D92DC0095D10B /* FlowersListViewModel.swift */; };
+		4540CDBE201D92F90095D10B /* FlowerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540CDBD201D92F90095D10B /* FlowerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		4540CDB4201D8EB80095D10B /* FlowersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersTableViewController.swift; sourceTree = "<group>"; };
 		4540CDB7201D8F080095D10B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		4540CDB9201D8FEE0095D10B /* Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower.swift; sourceTree = "<group>"; };
+		4540CDBB201D92DC0095D10B /* FlowersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListViewModel.swift; sourceTree = "<group>"; };
+		4540CDBD201D92F90095D10B /* FlowerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 				451EEE722019C32D00F6ED89 /* RegistrationViewModel.swift */,
 				451EEE782019C84D00F6ED89 /* UsersListViewModel.swift */,
 				451EEE7A2019C87400F6ED89 /* UserViewModel.swift */,
+				4540CDBB201D92DC0095D10B /* FlowersListViewModel.swift */,
+				4540CDBD201D92F90095D10B /* FlowerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -236,8 +242,10 @@
 				4540CDBA201D8FEE0095D10B /* Flower.swift in Sources */,
 				451EEE6E2019C0B900F6ED89 /* RegistrationTableViewController.swift in Sources */,
 				451EEE7D201AC8A000F6ED89 /* BindingTextField.swift in Sources */,
+				4540CDBC201D92DC0095D10B /* FlowersListViewModel.swift in Sources */,
 				451EEE7B2019C87400F6ED89 /* UserViewModel.swift in Sources */,
 				451EEE80201B2CBC00F6ED89 /* ValidatableViewModel.swift in Sources */,
+				4540CDBE201D92F90095D10B /* FlowerViewModel.swift in Sources */,
 				4540CDB5201D8EB80095D10B /* FlowersTableViewController.swift in Sources */,
 				451EEE772019C71F00F6ED89 /* DataAccess.swift in Sources */,
 				4540CDB8201D8F080095D10B /* WebService.swift in Sources */,
